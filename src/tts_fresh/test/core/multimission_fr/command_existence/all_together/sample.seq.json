@@ -1,0 +1,80 @@
+{
+    "id": "sample",
+    "steps": [
+        {
+            "type": "command",
+            "time": {
+                "tag": "00:00:01",
+                "type": "COMMAND_RELATIVE"
+            },
+            "stem": "CMD_NO_OP",
+            "args": []
+        },
+        {
+            "type": "command",
+            "time": {
+                "tag": "00:00:01",
+                "type": "COMMAND_RELATIVE"
+            },
+            "stem": "CMD_THAT_SHOULD_NOT_BE_HERE",
+            "args": []
+        },
+        {
+            "type": "command",
+            "time": {
+                "tag": "00:00:01",
+                "type": "COMMAND_RELATIVE"
+            },
+            "stem": "CMD_THAT_SHOULD_NOT_BE_HERE",
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 12345
+                },
+                {
+                    "name": "arg_1",
+                    "type": "string",
+                    "value": "example argument string"
+                }
+            ]
+        },
+        {
+            "type": "command",
+            "time": {
+                "tag": "00:00:01",
+                "type": "COMMAND_RELATIVE"
+            },
+            "stem": "CMD_NO_OP",
+            "args": []
+        },
+        {
+            "type": "command",
+            "time": {
+                "tag": "00:00:01",
+                "type": "COMMAND_RELATIVE"
+            },
+            "stem": "ANOTHER_CMD_THAT_SHOULD_NOT_BE_HERE",
+            "args": []
+        },
+        {
+            "type": "command",
+            "time": {
+                "tag": "00:00:01",
+                "type": "COMMAND_RELATIVE"
+            },
+            "stem": "CMD_NO_OP",
+            "args": []
+        },
+        {
+            "type": "command",
+            "time": {
+                "tag": "00:00:01",
+                "type": "COMMAND_RELATIVE"
+            },
+            "stem": "YET_ANOTHER_CMD_THAT_SHOULD_NOT_BE_HERE",
+            "args": []
+        }
+    ]
+}
+

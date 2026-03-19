@@ -1,0 +1,10 @@
+{
+    "command_existence_rule_files": [
+        "command_existence_rules.csv",
+        "more_command_existence_rules.csv",
+        "even_more_command_existence_rules.csv"
+    ],
+    "command_timing_rule_files": [],
+    "command_argument_rule_files": [],
+    "command_dictionary_path": "../../../../dictionaries/command.xml"
+}

@@ -1,0 +1,317 @@
+{
+  "id": "followed_by_test_seq",
+  "metadata": {
+    "planId": 1,
+    "timeSorted": true,
+    "simulationDatasetId": 1
+  },
+  "steps": [
+    {
+      "args": [
+        {
+          "name": "str_arg",
+          "type": "string",
+          "value": "A"
+        },
+        {
+          "name": "int_arg",
+          "type": "number",
+          "value": 10
+        }
+      ],
+      "stem": "FAKE_CMD_A",
+      "time": {
+        "tag": "00:00:05",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "name": "int_arg",
+          "type": "number",
+          "value": 10
+        }
+      ],
+      "stem": "FAKE_CMD_B",
+      "time": {
+        "tag": "00:00:00",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "name": "int_arg",
+          "type": "number",
+          "value": 5
+        }
+      ],
+      "stem": "FAKE_CMD_C",
+      "time": {
+        "tag": "00:00:49",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "name": "int_arg",
+          "type": "number",
+          "value": 5
+        }
+      ],
+      "stem": "FAKE_CMD_D",
+      "time": {
+        "tag": "00:01:00",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "name": "int_arg",
+          "type": "number",
+          "value": 5
+        }
+      ],
+      "stem": "FAKE_CMD_E",
+      "time": {
+        "tag": "00:00:42",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "name": "int_arg",
+          "type": "number",
+          "value": 5
+        }
+      ],
+      "stem": "FAKE_CMD_F",
+      "time": {
+        "tag": "00:00:08",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "name": "int_arg",
+          "type": "number",
+          "value": 5
+        }
+      ],
+      "stem": "FAKE_CMD_G",
+      "time": {
+        "tag": "00:05:00",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "name": "int_arg",
+          "type": "number",
+          "value": 1
+        }
+      ],
+      "stem": "FAKE_CMD_G",
+      "time": {
+        "tag": "00:05:00",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_H",
+      "time": {
+        "type": "COMMAND_COMPLETE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_I",
+      "time": {
+        "type": "COMMAND_COMPLETE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_J",
+      "time": {
+        "tag": "00:00:10",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_K",
+      "time": {
+        "type": "COMMAND_COMPLETE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_L",
+      "time": {
+        "tag": "-00:00:05",
+        "type": "EPOCH_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_M",
+      "time": {
+        "tag": "00:00:02",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_N",
+      "time": {
+        "tag": "00:00:05",
+        "type": "EPOCH_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_O",
+      "time": {
+        "tag": "2026-123T00:00:00",
+        "type": "ABSOLUTE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_P",
+      "time": {
+        "type": "COMMAND_COMPLETE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_Q",
+      "time": {
+        "tag": "2026-123T00:00:10",
+        "type": "ABSOLUTE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_R",
+      "time": {
+        "type": "COMMAND_COMPLETE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_S",
+      "time": {
+        "tag": "00:00:02",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_T",
+      "time": {
+        "tag": "00:00:20",
+        "type": "EPOCH_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_U",
+      "time": {
+        "tag": "00:00:02",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "string",
+          "value": "G00UINT",
+          "name": "left_var"
+        },
+        {
+          "type": "string",
+          "value": "EQUAL",
+          "name": "operator"
+        },
+        {
+          "type": "string",
+          "value": "G11UINT",
+          "name": "right_var"
+        }
+      ],
+      "stem": "SEQ_IF",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_V",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "SEQ_ELSE",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "FAKE_CMD_W",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "SEQ_END_IF",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+;on_board_filename=test.seq
+;on_board_path=/test
+;upload_type=load_and_go
+
+;######################## Timestamps ########################
+;# Test realtive timestamps
+R01:00:00 DPLY_SAV_RAR_EXIT_02_PRM
+
+;# Test aboslute timestamps
+A2013-100T01:01:01 DPLY_SAV_RAR_EXIT_02_PRM
+
+;##################### Test all floats #####################
+;# test F32
+R00:00:01 SFP_SET_THRSH SFP_MON_CDH_OVERTEMP_MSIA_TEMP_THRSH,9.5
+
+;###################### Test all ints ######################
+;# test I8 and I32 (this cmd has both types)
+R00:00:01 FSW_BURN_SUROM "file.o",2,203339
+
+;# test I16 and I32 (this cmd has both types)
+R00:00:01 FSW_PATCH_FSW "file.o","ZONE_0",1002,293933
+
+;###################### Test Strings #######################
+;# Test strings
+R00:00:01 STR_FILES_RM "/eng/config/PRELAUNCH_PARMCFG.seq"
+R00:00:01 STR_FILES_RM "This one has spaces"
+
+;####################### Test Enums ########################
+;# Test enums where user gave dict_value
+R00:00:01 OBC_SET_SSR_STATUS 0
+
+;# Test enums where user gave numeric value
+R00:00:01 OBC_SET_SSR_STATUS UNAVAILABLE
+
+;###################### Test No Args #######################
+;# Test command with no arguments
+R00:00:01 DPLY_SAV_RAR_EXIT_02_PRM
+
+;####################### Test Other ########################
+;# Test command with lots of args
+R00:00:01 RIC_PUD_PWR_CTRL "FS_DISABLE","WG_H_DISABLE","WG_V_DISABLE","SIF_H_DISABLE","SIF_V_DISABLE",2,0,"SSP_H_DISABLE","SSP_V_DISABLE",2,4
+
+;# Test command with arg that has quotes and spaces
+R00:00:01 FSW_BURN_FSW "this, has,spaces   and  ,,,commas",0,0

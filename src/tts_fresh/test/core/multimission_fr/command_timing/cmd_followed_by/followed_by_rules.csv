@@ -1,0 +1,104 @@
+FR_ID,FR_Version,Alert_Level,Command_Stem,Arg_Names,Arg_Values,Arg_Check_Type,Duration_Min,Duration_Max,Rel_Command,Rel_Arg_Names,Rel_Arg_Values,Message
+TEST-A-0401,10.4.0.0,VIOLATED,FAKE_CMD_A,,,followed_by,,,FAKE_CMD_B,int_arg,"=int_arg",Supposed to pass
+TEST-A-0402,10.4.0.0,VIOLATED,FAKE_CMD_A,,,followed_by,,,MISSING_CMD,,,MISSING_CMD not in file
+TEST-A-0403,10.4.0.0,VIOLATED,FAKE_CMD_B,,,followed_by,50,,FAKE_CMD_C,,,Must issue FAKE_CMD_C after 50 seconds
+TEST-A-0404,10.4.0.0,VIOLATED,FAKE_CMD_B,,,followed_by,50,,FAKE_CMD_D,,,Supposed to pass
+TEST-A-0405,10.4.0.0,VIOLATED,FAKE_CMD_B,,,followed_by,50,,FAKE_CMD_A,,,Must issue FAKE_CMD_A after 50 seconds
+TEST-A-0406,10.4.0.0,VIOLATED,FAKE_CMD_C,,,followed_by,,100,FAKE_CMD_D,,,Supposed to pass
+TEST-A-0407,10.4.0.0,VIOLATED,FAKE_CMD_C,,,followed_by,,100,FAKE_CMD_E,,,Must issue FAKE_CMD_E within 100 seconds
+TEST-A-0408,10.4.0.0,VIOLATED,FAKE_CMD_C,,,followed_by,,100,FAKE_CMD_A,,,Must issue FAKE_CMD_A within 100 seconds
+TEST-A-0409,10.4.0.0,VIOLATED,FAKE_CMD_D,,,followed_by,50,100,FAKE_CMD_E,,,Must issue FAKE_CMD_E after 50 seconds and within 100
+TEST-A-0410,10.4.0.0,VIOLATED,FAKE_CMD_D,,,followed_by,50,100,FAKE_CMD_F,,,Supposed to pass
+TEST-A-0411,10.4.0.0,VIOLATED,FAKE_CMD_D,,,followed_by,50,100,FAKE_CMD_G,,,Must issue FAKE_CMD_G after 50 seconds and within 100
+TEST-A-0412,10.4.0.0,VIOLATED,FAKE_CMD_D,,,followed_by,50,100,FAKE_CMD_A,,,Must issue FAKE_CMD_A after 50 seconds and within 100
+TEST-A-0413,10.4.0.0,VIOLATED,FAKE_CMD_A,str_arg,B,followed_by,,10,MISSING_CMD,,,Not triggered
+TEST-A-0414,10.4.0.0,VIOLATED,FAKE_CMD_B,,,followed_by,,,FAKE_CMD_G,int_arg,=,FAKE_CMD_G must set same value as FAKE_CMD_B
+TEST-A-0415,10.4.0.0,VIOLATED,FAKE_CMD_G,int_arg,5,followed_by,,,FAKE_CMD_G,int_arg,0,FAKE_CMD_G must be reset after change
+
+TEST-A-0420,10.4.0.0,VIOLATED,FAKE_CMD_H,,,followed_by,,,FAKE_CMD_I,,,Should pass
+TEST-A-0421,10.4.0.0,VIOLATED,FAKE_CMD_H,,,followed_by,,10,FAKE_CMD_I,,,Should be flagged
+TEST-A-0422,10.4.0.0,VIOLATED,FAKE_CMD_H,,,followed_by,5,,FAKE_CMD_I,,,Should be flagged
+TEST-A-0423,10.4.0.0,VIOLATED,FAKE_CMD_H,,,followed_by,5,10,FAKE_CMD_I,,,Should be flagged
+TEST-A-0424,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,,,FAKE_CMD_H,,,Should fail
+TEST-A-0425,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,,10,FAKE_CMD_H,,,Should fail
+TEST-A-0426,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,5,,FAKE_CMD_H,,,Should fail
+TEST-A-0427,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,5,10,FAKE_CMD_H,,,Should fail
+
+TEST-A-0430,10.4.0.0,VIOLATED,FAKE_CMD_H,,,followed_by,,,FAKE_CMD_J,,,Should pass
+TEST-A-0431,10.4.0.0,VIOLATED,FAKE_CMD_H,,,followed_by,8,,FAKE_CMD_J,,,Should pass
+TEST-A-0432,10.4.0.0,VIOLATED,FAKE_CMD_H,,,followed_by,10,,FAKE_CMD_J,,,Should pass
+TEST-A-0433,10.4.0.0,VIOLATED,FAKE_CMD_H,,,followed_by,,8,FAKE_CMD_J,,,Should fail
+TEST-A-0434,10.4.0.0,VIOLATED,FAKE_CMD_H,,,followed_by,,10,FAKE_CMD_J,,,Should be flagged
+TEST-A-0435,10.4.0.0,VIOLATED,FAKE_CMD_H,,,followed_by,12,,FAKE_CMD_J,,,Should be flagged
+TEST-A-0436,10.4.0.0,VIOLATED,FAKE_CMD_H,,,followed_by,,12,FAKE_CMD_J,,,Should be flagged
+TEST-A-0437,10.4.0.0,VIOLATED,FAKE_CMD_H,,,followed_by,10,12,FAKE_CMD_J,,,Should be flagged
+TEST-A-0438,10.4.0.0,VIOLATED,FAKE_CMD_J,,,followed_by,,,FAKE_CMD_H,,,Should fail
+
+TEST-A-0440,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,,,FAKE_CMD_K,,,Should pass
+TEST-A-0441,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,8,,FAKE_CMD_K,,,Should pass
+TEST-A-0442,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,10,,FAKE_CMD_K,,,Should pass
+TEST-A-0443,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,,8,FAKE_CMD_K,,,Should fail
+TEST-A-0444,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,,10,FAKE_CMD_K,,,Should be flagged
+TEST-A-0445,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,,12,FAKE_CMD_K,,,Should be flagged
+TEST-A-0446,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,8,12,FAKE_CMD_K,,,Should be flagged
+TEST-A-0447,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,10,12,FAKE_CMD_K,,,Should be flagged
+TEST-A-0448,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,12,,FAKE_CMD_K,,,Should be flagged
+TEST-A-0449,10.4.0.0,VIOLATED,FAKE_CMD_K,,,followed_by,,,FAKE_CMD_I,,,Should fail
+
+TEST-A-0450,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,,,FAKE_CMD_L,,,Should pass
+TEST-A-0451,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,8,,FAKE_CMD_L,,,Should pass
+TEST-A-0452,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,10,,FAKE_CMD_L,,,Should pass
+TEST-A-0453,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,,8,FAKE_CMD_L,,,Should fail
+TEST-A-0454,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,,10,FAKE_CMD_L,,,Should be flagged
+TEST-A-0455,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,,12,FAKE_CMD_L,,,Should be flagged
+TEST-A-0456,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,8,12,FAKE_CMD_L,,,Should be flagged
+TEST-A-0457,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,10,12,FAKE_CMD_L,,,Should be flagged
+TEST-A-0458,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,12,,FAKE_CMD_L,,,Should be flagged
+TEST-A-0459,10.4.0.0,VIOLATED,FAKE_CMD_L,,,followed_by,,,FAKE_CMD_I,,,Should fail
+
+TEST-A-0460,10.4.0.0,VIOLATED,FAKE_CMD_L,,,followed_by,,,FAKE_CMD_N,,,Should pass
+TEST-A-0461,10.4.0.0,VIOLATED,FAKE_CMD_L,,,followed_by,,10,FAKE_CMD_N,,,Should pass
+TEST-A-0462,10.4.0.0,VIOLATED,FAKE_CMD_L,,,followed_by,10,,FAKE_CMD_N,,,Should pass
+TEST-A-0463,10.4.0.0,VIOLATED,FAKE_CMD_L,,,followed_by,8,12,FAKE_CMD_N,,,Should pass
+TEST-A-0464,10.4.0.0,VIOLATED,FAKE_CMD_L,,,followed_by,,8,FAKE_CMD_N,,,Should fail
+TEST-A-0465,10.4.0.0,VIOLATED,FAKE_CMD_L,,,followed_by,12,,FAKE_CMD_N,,,Should fail
+TEST-A-0466,10.4.0.0,VIOLATED,FAKE_CMD_N,,,followed_by,,,FAKE_CMD_L,,,Should fail
+
+TEST-A-0470,10.4.0.0,VIOLATED,FAKE_CMD_M,,,followed_by,,,FAKE_CMD_N,,,Should pass
+TEST-A-0471,10.4.0.0,VIOLATED,FAKE_CMD_M,,,followed_by,,8,FAKE_CMD_N,,,Should pass
+TEST-A-0472,10.4.0.0,VIOLATED,FAKE_CMD_M,,,followed_by,8,,FAKE_CMD_N,,,Should pass
+TEST-A-0473,10.4.0.0,VIOLATED,FAKE_CMD_M,,,followed_by,6,10,FAKE_CMD_N,,,Should pass
+TEST-A-0474,10.4.0.0,VIOLATED,FAKE_CMD_M,,,followed_by,,6,FAKE_CMD_N,,,Should fail
+TEST-A-0475,10.4.0.0,VIOLATED,FAKE_CMD_M,,,followed_by,10,,FAKE_CMD_N,,,Should fail
+TEST-A-0476,10.4.0.0,VIOLATED,FAKE_CMD_N,,,followed_by,,,FAKE_CMD_M,,,Should fail
+
+TEST-A-0480,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,,,FAKE_CMD_O,,,Should pass
+TEST-A-0481,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,20,,FAKE_CMD_O,,,Should pass
+TEST-A-0482,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,,18,FAKE_CMD_O,,,Should fail
+TEST-A-0483,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,,22,FAKE_CMD_O,,,Should be flagged
+TEST-A-0484,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,20,22,FAKE_CMD_O,,,Should be flagged
+TEST-A-0485,10.4.0.0,VIOLATED,FAKE_CMD_I,,,followed_by,22,,FAKE_CMD_O,,,Should be flagged
+TEST-A-0486,10.4.0.0,VIOLATED,FAKE_CMD_O,,,followed_by,,,FAKE_CMD_I,,,Should fail
+
+TEST-A-0490,10.4.0.0,VIOLATED,FAKE_CMD_O,,,followed_by,,,FAKE_CMD_Q,,,Should pass
+TEST-A-0491,10.4.0.0,VIOLATED,FAKE_CMD_O,,,followed_by,,10,FAKE_CMD_Q,,,Should pass
+TEST-A-0492,10.4.0.0,VIOLATED,FAKE_CMD_O,,,followed_by,10,,FAKE_CMD_Q,,,Should pass
+TEST-A-0493,10.4.0.0,VIOLATED,FAKE_CMD_O,,,followed_by,,8,FAKE_CMD_Q,,,Should fail
+TEST-A-0494,10.4.0.0,VIOLATED,FAKE_CMD_O,,,followed_by,12,,FAKE_CMD_Q,,,Should fail
+TEST-A-0495,10.4.0.0,VIOLATED,FAKE_CMD_Q,,,followed_by,,,FAKE_CMD_O,,,Should fail
+
+TEST-A-1400,10.4.0.0,VIOLATED,FAKE_CMD_N,,,followed_by,,,FAKE_CMD_S,,,Should pass
+TEST-A-1401,10.4.0.0,VIOLATED,FAKE_CMD_N,,,followed_by,10,,FAKE_CMD_S,,,Should pass
+TEST-A-1402,10.4.0.0,VIOLATED,FAKE_CMD_N,,,followed_by,12,,FAKE_CMD_S,,,Should pass
+TEST-A-1403,10.4.0.0,VIOLATED,FAKE_CMD_N,,,followed_by,,10,FAKE_CMD_S,,,Should fail
+TEST-A-1404,10.4.0.0,VIOLATED,FAKE_CMD_N,,,followed_by,,12,FAKE_CMD_S,,,Should be flagged
+TEST-A-1405,10.4.0.0,VIOLATED,FAKE_CMD_N,,,followed_by,,14,FAKE_CMD_S,,,Should be flagged
+TEST-A-1406,10.4.0.0,VIOLATED,FAKE_CMD_N,,,followed_by,14,,FAKE_CMD_S,,,Should be flagged
+TEST-A-1407,10.4.0.0,VIOLATED,FAKE_CMD_N,,,followed_by,10,14,FAKE_CMD_S,,,Should be flagged
+TEST-A-1408,10.4.0.0,VIOLATED,FAKE_CMD_S,,,followed_by,,,FAKE_CMD_N,,,Should fail
+
+TEST-A-1410,10.4.0.0,VIOLATED,FAKE_CMD_U,,,followed_by,,,FAKE_CMD_V,,,Should fail
+TEST-A-1411,10.4.0.0,VIOLATED,FAKE_CMD_V,,,followed_by,,,FAKE_CMD_U,,,Should fail
+TEST-A-1412,10.4.0.0,VIOLATED,FAKE_CMD_V,,,followed_by,,,FAKE_CMD_W,,,Should fail
+TEST-A-1413,10.4.0.0,VIOLATED,FAKE_CMD_W,,,followed_by,,,FAKE_CMD_V,,,Should fail
+

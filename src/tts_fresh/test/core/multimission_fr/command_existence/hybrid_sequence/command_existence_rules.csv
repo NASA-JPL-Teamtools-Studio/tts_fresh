@@ -1,0 +1,4 @@
+FR_ID,FR_Version,Alert_Level,Command_Stem,Message
+TEST_CEFR-A-0010,1,VIOLATED,DISALLOWED_FSW_COMMAND,Test flight rule for command existence flight rule checker.
+TEST_CEFR-A-0011,1,VIOLATED,DISALLOWED_HW_COMMAND,Test flight rule for command existence flight rule checker.
+

@@ -1,0 +1,467 @@
+import json
+import os
+from dataclasses import dataclass
+
+# Since this is a long and involved sequence, this python script serves as a more legible version of the sequence.
+# To update the sequence, update this script and re-generate the seq.json file.
+
+def main():
+    steps = [
+        # rel_args matching between command pairs.
+        STEP_NUMBER(1),
+        cmd('A', 'X'),
+        cmd('B', 'X'),
+        sep(),
+        cmd('A', 'X'),
+        cmd('B', 'Y'),
+        sep(),
+        cmd('A', 'Y'),
+        cmd('B', 'X'),
+        sep(),
+        cmd('A', 'Y'),
+        cmd('B', 'Y'),
+        sep(),
+        
+        STEP_NUMBER(21),
+        cmd('A', 0),
+        cmd('B', 0),
+        sep(),
+        cmd('A', 0),
+        cmd('B', 1),
+        sep(),
+        cmd('A', 1),
+        cmd('B', 0),
+        sep(),
+        cmd('A', 1),
+        cmd('B', 1),
+        sep(),
+
+        STEP_NUMBER(41),
+        cmd('A', symbol('X')),
+        cmd('B', 'X'),
+        sep(),
+        cmd('A', symbol('X')),
+        cmd('B', 'Y'),
+        sep(),
+        cmd('A', 'X'),
+        cmd('B', symbol('X')),
+        sep(),
+        cmd('A', 'Y'),
+        cmd('B', symbol('X')),
+        sep(),
+        cmd('A', symbol('X')),
+        cmd('B', symbol('X')),
+        sep(),
+        cmd('A', symbol('X')),
+        cmd('B', symbol('Y')),
+        sep(),
+
+        STEP_NUMBER(101),
+        cmd('C', 'X', 'Y'),
+        cmd('D', 'X', 'Z'),
+        sep(),
+        cmd('C', 'X', 'Y'),
+        cmd('D', 'Z', 'X'),
+        sep(),
+        cmd('C', 'X', 'Y'),
+        cmd('D', 'Z', 'W'),
+        sep(),
+        cmd('C', 'X', 'Y'),
+        cmd('D', 'Y', 'W'),
+        sep(),
+        cmd('C', 'X', 'Y'),
+        cmd('D', 'Z', 'Y'),
+        sep(),
+
+        STEP_NUMBER(121),
+        cmd('C', 0, 1),
+        cmd('D', 0, 2),
+        sep(),
+        cmd('C', 0, 1),
+        cmd('D', 2, 0),
+        sep(),
+        cmd('C', 0, 1),
+        cmd('D', 2, 3),
+        sep(),
+        cmd('C', 0, 1),
+        cmd('D', 1, 3),
+        sep(),
+        cmd('C', 0, 1),
+        cmd('D', 2, 1),
+        sep(),
+
+        # Use different command stems to avoid rules looking across blocks
+        STEP_NUMBER(141),
+        cmd('C2', symbol('X'), 'Y'),
+        cmd('D2', 'X', 'Z'),
+        sep(),
+        cmd('C2', 'X', 'Y'),
+        cmd('D2', 'X', symbol('Z')),
+        sep(),
+        cmd('C2', symbol('X'), 'Y'),
+        cmd('D2', 'X', symbol('Z')),
+        sep(),
+        cmd('C2', 'X', symbol('Y')),
+        cmd('D2', symbol('X'), 'Z'),
+        sep(),
+
+        STEP_NUMBER(161),
+        cmd('C3', symbol('X'), 'Y'),
+        cmd('D3', 'X'),
+        sep(),
+        cmd('C3', 'X', 'Y'),
+        cmd('D3', 'X'),
+        sep(),
+        cmd('C3'),
+        cmd('D3', 'X', symbol('Z')),
+        sep(),
+        cmd('C3'),
+        cmd('D3', symbol('X'), 'Z'),
+        sep(),
+
+        STEP_NUMBER(201),
+        cmd('E', 'Y', 'X'),
+        cmd('F', 'Z', 'X'),
+        sep(),
+        cmd('E', 'Y', 'X'),
+        cmd('F', 'X', 'Z'),
+        sep(),
+        cmd('E', 'Y', 'X'),
+        cmd('F', 'W', 'Z'),
+        sep(),
+        cmd('E', 'Y', 'X'),
+        cmd('F', 'W', 'Y'),
+        sep(),
+        cmd('E', 'Y', 'X'),
+        cmd('F', 'Y', 'Z'),
+        sep(),
+
+        STEP_NUMBER(221),
+        cmd('E', 1, 0),
+        cmd('F', 2, 0),
+        sep(),
+        cmd('E', 1, 0),
+        cmd('F', 0, 2),
+        sep(),
+        cmd('E', 1, 0),
+        cmd('F', 3, 2),
+        sep(),
+        cmd('E', 1, 0),
+        cmd('F', 3, 1),
+        sep(),
+        cmd('E', 1, 0),
+        cmd('F', 1, 2),
+        sep(),
+
+        # Use different command stems to avoid rules looking across blocks
+        STEP_NUMBER(241),
+        cmd('E2', 'Y', symbol('X')),
+        cmd('F2', 'Z', 'X'),
+        sep(),
+        cmd('E2', 'Y', 'X'),
+        cmd('F2', symbol('Z'), 'X'),
+        sep(),
+        cmd('E2', 'Y', symbol('X')),
+        cmd('F2', symbol('Z'), 'X'),
+        sep(),
+        cmd('E2', symbol('Y'), 'X'),
+        cmd('F2', 'Z', symbol('X')),
+        sep(),
+        cmd('E2', 'Y', symbol('X')),
+        cmd('F2', 'X', symbol('Z')),
+        sep(),
+        cmd('E2', symbol('Y'), 'X'),
+        cmd('F2', symbol('X'), 'Z'),
+        sep(),
+
+        STEP_NUMBER(261),
+        cmd('E3', 'Y', symbol('X')),
+        cmd('F3'),
+        sep(),
+        cmd('E3', 'Y', 'X'),
+        cmd('F3'),
+        sep(),
+        cmd('E3'),
+        cmd('F3', symbol('Z'), 'X'),
+        sep(),
+        cmd('E3'),
+        cmd('F3', 'Z', symbol('X')),
+        sep(),
+
+        STEP_NUMBER(301),
+        cmd('G', 'X', 'X'),
+        cmd('H', 'X', 'X'),
+        sep(),
+        cmd('G', 'X', 'Y'),
+        cmd('H', 'X', 'X'),
+        sep(),
+        cmd('G', 'X', 'X'),
+        cmd('H', 'X', 'Y'),
+        sep(),
+        cmd('G', 'X', 'Y'),
+        cmd('H', 'X', 'Y'),
+        sep(),
+        cmd('G', 'Y', 'X'),
+        cmd('H', 'X', 'X'),
+        sep(),
+        cmd('G', 'Y', 'Y'),
+        cmd('H', 'X', 'X'),
+        sep(),
+        cmd('G', 'Y', 'X'),
+        cmd('H', 'X', 'Y'),
+        sep(),
+        cmd('G', 'Y', 'Y'),
+        cmd('H', 'X', 'Y'),
+        sep(),
+        cmd('G', 'X', 'X'),
+        cmd('H', 'Y', 'X'),
+        sep(),
+        cmd('G', 'X', 'Y'),
+        cmd('H', 'Y', 'X'),
+        sep(),
+        cmd('G', 'X', 'X'),
+        cmd('H', 'Y', 'Y'),
+        sep(),
+        cmd('G', 'X', 'Y'),
+        cmd('H', 'Y', 'Y'),
+        sep(),
+        cmd('G', 'Y', 'X'),
+        cmd('H', 'Y', 'X'),
+        sep(),
+        cmd('G', 'Y', 'Y'),
+        cmd('H', 'Y', 'X'),
+        sep(),
+        cmd('G', 'Y', 'X'),
+        cmd('H', 'Y', 'Y'),
+        sep(),
+        cmd('G', 'Y', 'Y'),
+        cmd('H', 'Y', 'Y'),
+        sep(),
+
+        STEP_NUMBER(351),
+        cmd('G', 0, 0),
+        cmd('H', 0, 0),
+        sep(),
+        cmd('G', 0, 1),
+        cmd('H', 0, 0),
+        sep(),
+        cmd('G', 0, 0),
+        cmd('H', 0, 1),
+        sep(),
+        cmd('G', 0, 1),
+        cmd('H', 0, 1),
+        sep(),
+        cmd('G', 1, 0),
+        cmd('H', 0, 0),
+        sep(),
+        cmd('G', 1, 1),
+        cmd('H', 0, 0),
+        sep(),
+        cmd('G', 1, 0),
+        cmd('H', 0, 1),
+        sep(),
+        cmd('G', 1, 1),
+        cmd('H', 0, 1),
+        sep(),
+        cmd('G', 0, 0),
+        cmd('H', 1, 0),
+        sep(),
+        cmd('G', 0, 1),
+        cmd('H', 1, 0),
+        sep(),
+        cmd('G', 0, 0),
+        cmd('H', 1, 1),
+        sep(),
+        cmd('G', 0, 1),
+        cmd('H', 1, 1),
+        sep(),
+        cmd('G', 1, 0),
+        cmd('H', 1, 0),
+        sep(),
+        cmd('G', 1, 1),
+        cmd('H', 1, 0),
+        sep(),
+        cmd('G', 1, 0),
+        cmd('H', 1, 1),
+        sep(),
+        cmd('G', 1, 1),
+        cmd('H', 1, 1),
+        sep(),
+
+        STEP_NUMBER(401),
+        cmd('G2', 'X', 'X'),
+        cmd('H2', 'X', 'X'),
+        sep(),
+        cmd('G2', 'X', symbol('X')),
+        cmd('H2', 'X', 'X'),
+        sep(),
+        cmd('G2', 'X', 'X'),
+        cmd('H2', 'X', symbol('X')),
+        sep(),
+        cmd('G2', 'X', symbol('X')),
+        cmd('H2', 'X', symbol('X')),
+        sep(),
+        cmd('G2', symbol('X'), 'X'),
+        cmd('H2', 'X', 'X'),
+        sep(),
+        cmd('G2', symbol('X'), symbol('X')),
+        cmd('H2', 'X', 'X'),
+        sep(),
+        cmd('G2', symbol('X'), 'X'),
+        cmd('H2', 'X', symbol('X')),
+        sep(),
+        cmd('G2', symbol('X'), symbol('X')),
+        cmd('H2', 'X', symbol('X')),
+        sep(),
+        cmd('G2', 'X', 'X'),
+        cmd('H2', symbol('X'), 'X'),
+        sep(),
+        cmd('G2', 'X', symbol('X')),
+        cmd('H2', symbol('X'), 'X'),
+        sep(),
+        cmd('G2', 'X', 'X'),
+        cmd('H2', symbol('X'), symbol('X')),
+        sep(),
+        cmd('G2', 'X', symbol('X')),
+        cmd('H2', symbol('X'), symbol('X')),
+        sep(),
+        cmd('G2', symbol('X'), 'X'),
+        cmd('H2', symbol('X'), 'X'),
+        sep(),
+        cmd('G2', symbol('X'), symbol('X')),
+        cmd('H2', symbol('X'), 'X'),
+        sep(),
+        cmd('G2', symbol('X'), 'X'),
+        cmd('H2', symbol('X'), symbol('X')),
+        sep(),
+        cmd('G2', symbol('X'), symbol('X')),
+        cmd('H2', symbol('X'), symbol('X')),
+        sep(),
+
+        # Same as block 401 with literal X replaced by literal Y.
+        # Only used to test rules that match a literal X somewhere.
+        STEP_NUMBER(451),
+        cmd('G3', 'Y', 'Y'),
+        cmd('H3', 'Y', 'Y'),
+        sep(),
+        cmd('G3', 'Y', symbol('Y')),
+        cmd('H3', 'Y', 'Y'),
+        sep(),
+        cmd('G3', 'Y', 'Y'),
+        cmd('H3', 'Y', symbol('Y')),
+        sep(),
+        cmd('G3', 'Y', symbol('Y')),
+        cmd('H3', 'Y', symbol('Y')),
+        sep(),
+        cmd('G3', symbol('Y'), 'Y'),
+        cmd('H3', 'Y', 'Y'),
+        sep(),
+        cmd('G3', symbol('Y'), symbol('Y')),
+        cmd('H3', 'Y', 'Y'),
+        sep(),
+        cmd('G3', symbol('Y'), 'Y'),
+        cmd('H3', 'Y', symbol('Y')),
+        sep(),
+        cmd('G3', symbol('Y'), symbol('Y')),
+        cmd('H3', 'Y', symbol('Y')),
+        sep(),
+        cmd('G3', 'Y', 'Y'),
+        cmd('H3', symbol('Y'), 'Y'),
+        sep(),
+        cmd('G3', 'Y', symbol('Y')),
+        cmd('H3', symbol('Y'), 'Y'),
+        sep(),
+        cmd('G3', 'Y', 'Y'),
+        cmd('H3', symbol('Y'), symbol('Y')),
+        sep(),
+        cmd('G3', 'Y', symbol('Y')),
+        cmd('H3', symbol('Y'), symbol('Y')),
+        sep(),
+        cmd('G3', symbol('Y'), 'Y'),
+        cmd('H3', symbol('Y'), 'Y'),
+        sep(),
+        cmd('G3', symbol('Y'), symbol('Y')),
+        cmd('H3', symbol('Y'), 'Y'),
+        sep(),
+        cmd('G3', symbol('Y'), 'Y'),
+        cmd('H3', symbol('Y'), symbol('Y')),
+        sep(),
+        cmd('G3', symbol('Y'), symbol('Y')),
+        cmd('H3', symbol('Y'), symbol('Y')),
+        sep(),
+    ]
+    steps = expand_steps(steps)
+    seq_json = {
+        "id": "test",
+        "metadata": {
+            "comment": f"This test sequence was generated by {os.path.basename(__file__)}. Look to that file for a more legible description of the sequence."
+        },
+        "steps": steps
+    }
+    seq_json_file = os.path.join(os.path.dirname(__file__), 'test.seq.json')
+    print(f'Writing sequence to {seq_json_file}')
+    with open(seq_json_file, 'w') as f:
+        json.dump(seq_json, f, indent=2)
+
+def cmd(stem_letter, *args):
+    args = list(args)
+    for i, arg in enumerate(args):
+        if not isinstance(arg, dict):
+            type_name = {str: 'string', int: 'number', float: 'number'}[type(arg)]
+            arg = {
+                "type": type_name,
+                "value": arg
+            }
+        arg['name'] = f'arg_{i}' if arg.get('name') is None else arg['name']
+        args[i] = arg
+    return {
+        "args": args,
+        "stem": "FAKE_CMD_" + stem_letter,
+        "time": {
+            "tag": "00:00:01",
+            "type": "COMMAND_RELATIVE"
+        },
+        "type": "command"
+    }
+
+def sep(time_tag="01:00:00"):
+    return {
+        "args": [],
+        "stem": "CMD_NO_OP",
+        "time": {
+            "tag": time_tag,
+            "type": "COMMAND_RELATIVE"
+        },
+        "type": "command"
+    }
+
+def symbol(value):
+    return {
+        "type": "symbol",
+        "value": value
+    }
+
+@dataclass
+class STEP_NUMBER:
+    """
+    Placeholder used to insert CMD_NO_OPs such that the following command is at the given step.
+
+    That makes tests a little easier to modify down the road.
+    """
+    num: int
+
+def expand_steps(steps):
+    expanded_steps = []
+    for step in steps:
+        if isinstance(step, STEP_NUMBER):
+            desired_step_number = step.num
+            steps_to_add = desired_step_number - len(expanded_steps) - 1
+            assert steps_to_add >= 0
+            expanded_steps += [sep("00:00:01")] * steps_to_add
+        else:
+            expanded_steps.append(step)
+    return expanded_steps
+
+if __name__ == '__main__':
+    main()
+

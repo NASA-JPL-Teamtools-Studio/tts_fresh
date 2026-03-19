@@ -1,0 +1,23 @@
+{
+    "command_existence_rule_files": [
+        "../flightrules/EURC/command_existence_rules/hw_commands.csv",
+        "../flightrules/EURC/command_existence_rules/permanent.csv",
+        "../flightrules/EURC/command_existence_rules/remove-after-1-AU.csv",
+        "../flightrules/EURC/command_existence_rules/remove-after-2-AU.csv",
+        "../flightrules/EURC/command_existence_rules/remove-after-3-AU.csv",
+        "../flightrules/EURC/command_existence_rules/remove-after-JOI.csv",
+        "../flightrules/EURC/command_existence_rules/remove-after-reason-deployed.csv",
+        "../flightrules/EURC/command_existence_rules/remove-after-reason-OVRO.csv",
+        "../flightrules/EURC/command_existence_rules/remove-with-R10.5.csv"
+    ],
+    "command_timing_rule_files": [
+        "../flightrules/EURC/command_timing_rules/permanent.csv",
+        "../flightrules/EURC/command_timing_rules/remove-after-2-AU.csv"
+    ],
+    "command_argument_rule_files": [
+        "../flightrules/EURC/command_argument_rules/permanent.csv",
+        "../flightrules/EURC/command_argument_rules/remove_after_2AU.csv",
+        "../flightrules/EURC/command_argument_rules/remove_after_suda_door_deploy.csv"
+    ],
+    "command_dictionary_path": "/dict/eurc/current/command.xml"
+}

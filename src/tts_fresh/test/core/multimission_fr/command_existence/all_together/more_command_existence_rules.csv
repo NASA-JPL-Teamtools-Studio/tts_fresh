@@ -1,0 +1,4 @@
+FR_Version,Alert_Level,Message,FR_ID,Command_Stem
+2,FLAGGED,From more_command_existence_rules,TEST_CEFR-A-0005,ANOTHER_CMD_THAT_SHOULD_NOT_BE_HERE
+3,VIOLATED,From more_command_existence_rules,TEST_CEFR-B-0006,CMD_NOT_IN_SEQUENCE
+

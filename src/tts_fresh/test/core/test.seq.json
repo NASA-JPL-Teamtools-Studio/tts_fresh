@@ -1,0 +1,800 @@
+{
+    "id": "test_seq_5a",
+    "metadata": {
+        "planId": 1,
+        "timeSorted": false,
+        "simulationDatasetId": 1
+    },
+    "steps": [
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 30
+                }
+            ],
+            "stem": "BEGIN_PARAM_TRANS",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 218947754
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 0
+                }
+            ],
+            "stem": "SET_I8_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 34209792
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 10800
+                }
+            ],
+            "stem": "SET_U32_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252379137
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 0
+                }
+            ],
+            "stem": "SET_I8_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252379138
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 1
+                }
+            ],
+            "stem": "SET_I8_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252379139
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 5
+                }
+            ],
+            "stem": "SET_I8_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 253358080
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 466259556
+                }
+            ],
+            "stem": "SET_U32_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 253358155
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 466262701
+                }
+            ],
+            "stem": "SET_U32_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252379140
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 3
+                }
+            ],
+            "stem": "SET_I8_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252379141
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 3355
+                }
+            ],
+            "stem": "SET_I32_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252379142
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 416
+                }
+            ],
+            "stem": "SET_U16_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252379143
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 2
+                }
+            ],
+            "stem": "SET_I8_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252379144
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 0
+                }
+            ],
+            "stem": "SET_I8_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252379145
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 0
+                }
+            ],
+            "stem": "SET_I8_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252379146
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 0
+                }
+            ],
+            "stem": "SET_I8_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252379147
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 0
+                }
+            ],
+            "stem": "SET_I8_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252380017
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 60
+                }
+            ],
+            "stem": "SET_U16_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252380018
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 1800
+                }
+            ],
+            "stem": "SET_U16_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252380019
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 3600
+                }
+            ],
+            "stem": "SET_U16_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252380020
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 3600
+                }
+            ],
+            "stem": "SET_U16_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252380021
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 60
+                }
+            ],
+            "stem": "SET_U16_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252380022
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 1800
+                }
+            ],
+            "stem": "SET_U16_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252380023
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 3600
+                }
+            ],
+            "stem": "SET_U16_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 252380024
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 3600
+                }
+            ],
+            "stem": "SET_U16_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 168689676
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 480223900
+                }
+            ],
+            "stem": "SET_U32_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 168689670
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 1
+                }
+            ],
+            "stem": "SET_I8_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 168689664
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 0
+                }
+            ],
+            "stem": "SET_I8_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 68026368
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 0
+                }
+            ],
+            "stem": "SET_U32_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 68026369
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 406000
+                }
+            ],
+            "stem": "SET_U32_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 68026370
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 662000
+                }
+            ],
+            "stem": "SET_U32_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "number",
+                    "value": 68026371
+                },
+                {
+                    "name": "arg_1",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 108000
+                }
+            ],
+            "stem": "SET_U32_PARAM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "arg_0",
+                    "type": "string",
+                    "value": "TRUE"
+                },
+                {
+                    "name": "arg_1",
+                    "type": "string",
+                    "value": "TRUE"
+                },
+                {
+                    "name": "arg_2",
+                    "type": "number",
+                    "value": 100
+                }
+            ],
+            "stem": "END_PARAM_TRANS",
+            "time": {
+                "tag": "00:00:10",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        }
+    ]
+  }

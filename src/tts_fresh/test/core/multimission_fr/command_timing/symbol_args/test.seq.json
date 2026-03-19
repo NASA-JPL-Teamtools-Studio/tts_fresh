@@ -1,0 +1,315 @@
+{
+  "id": "cmd_overlaps_test_seq",
+  "metadata": {},
+  "locals": [
+    {
+      "name": "L01STR",
+      "type": "STRING"
+    }
+  ],
+  "steps": [
+    {
+      "args": [
+        {
+          "type": "string",
+          "value": "literal string",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "string",
+          "value": "literal string",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "CMD_NO_OP",
+      "time": {
+        "tag": "00:10:00",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "string",
+          "value": "literal string",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "string",
+          "value": "another literal string",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "CMD_NO_OP",
+      "time": {
+        "tag": "00:10:00",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "string",
+          "value": "another literal string",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "string",
+          "value": "literal string",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "CMD_NO_OP",
+      "time": {
+        "tag": "00:10:00",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "string",
+          "value": "literal string",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "symbol",
+          "value": "G01STR",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "CMD_NO_OP",
+      "time": {
+        "tag": "00:10:00",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "symbol",
+          "value": "L01STR",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "string",
+          "value": "literal string",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "CMD_NO_OP",
+      "time": {
+        "tag": "00:10:00",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "string",
+          "value": "another literal string",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "symbol",
+          "value": "G01STR",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "CMD_NO_OP",
+      "time": {
+        "tag": "00:10:00",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "symbol",
+          "value": "L01STR",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "string",
+          "value": "another literal string",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [],
+      "stem": "CMD_NO_OP",
+      "time": {
+        "tag": "00:10:00",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "symbol",
+          "value": "G01STR",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "symbol",
+          "value": "L01STR",
+          "name": "string_echo"
+        }
+      ],
+      "stem": "SEQ_ECHO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command"
+    }
+  ]
+}

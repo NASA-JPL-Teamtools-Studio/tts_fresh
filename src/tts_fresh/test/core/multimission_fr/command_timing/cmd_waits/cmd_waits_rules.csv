@@ -1,0 +1,9 @@
+FR_ID,FR_Version,Alert_Level,Command_Stem,Arg_Names,Arg_Values,Arg_Check_Type,Duration_Min,Duration_Max,Rel_Command,Rel_Arg_Names,Rel_Arg_Values,Message
+TEST-A-0401,10.4.0.0,VIOLATED,FAKE_CMD_A,,,wait,,,MISSING_CMD,,,"Supposed to pass, MISSING_CMD not in file"
+TEST-A-0402,10.4.0.0,VIOLATED,FAKE_CMD_B,int_arg,"=int_arg",wait,,,FAKE_CMD_A,,,"Supposed to pass, 0 minute wait"
+TEST-A-0403,10.4.0.0,VIOLATED,FAKE_CMD_A,,,wait,50,,FAKE_CMD_B,,,"Supposed to pass, A occurs before and way after B"
+TEST-A-0404,10.4.0.0,VIOLATED,FAKE_CMD_C,,,wait,50,,FAKE_CMD_B,,,Supposed to pass
+TEST-A-0405,10.4.0.0,VIOLATED,FAKE_CMD_D,,,wait,600,,FAKE_CMD_B,,,FAKE_CMD_D must wait 10 mins after FAKE_CMD_B
+TEST-A-0406,10.4.0.0,VIOLATED,FAKE_CMD_A,,,wait,60,,FAKE_CMD_D,,,FAKE_CMD_A must wait 1 min after FAKE_CMD_D
+TEST-A-0407,10.4.0.0,VIOLATED,FAKE_CMD_A,"str_arg; int_arg","A;=",wait,600,,FAKE_CMD_A,,,FAKE_CMD_A must wait 5 mins after itself
+TEST-A-0408,10.4.0.0,VIOLATED,FAKE_CMD_A,"str_arg; int_arg","B; =",wait,600,,FAKE_CMD_A,str_arg,B,Not triggered: ' =' interpreted as literal argument value

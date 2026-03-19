@@ -1,0 +1,6 @@
+{
+    "command_existence_rule_files": [],
+    "command_timing_rule_files": [],
+    "command_argument_rule_files": [],
+    "command_dictionary_path": "../dictionaries/EURC_R10_3_1_0/command.xml"
+}

@@ -1,0 +1,17 @@
+FR_ID,FR_Version,Alert_Level,Command_Stem,Arg_Names,Arg_Values,Arg_Check_Type,Duration_Min,Duration_Max,Rel_Command,Rel_Arg_Names,Rel_Arg_Values,Message
+TEST-A-0401,10.4.0.0,VIOLATED,FAKE_CMD_B,int_arg,"=int_arg",follows,,,FAKE_CMD_A,,,Supposed to pass
+TEST-A-0402,10.4.0.0,VIOLATED,FAKE_CMD_B,,,follows,,,MISSING_CMD,,,MISSING_CMD not in file
+TEST-A-0403,10.4.0.0,VIOLATED,FAKE_CMD_C,,,follows,50,,FAKE_CMD_B,,,FAKE_CMD_C must occur at least 50 seconds after FAKE_CMD_B
+TEST-A-0404,10.4.0.0,VIOLATED,FAKE_CMD_D,,,follows,50,,FAKE_CMD_B,,,Supposed to pass
+TEST-A-0405,10.4.0.0,VIOLATED,FAKE_CMD_A,,,follows,50,,FAKE_CMD_B,,,FAKE_CMD_A must occur at least 50 seconds after FAKE_CMD_B
+TEST-A-0406,10.4.0.0,VIOLATED,FAKE_CMD_D,,,follows,,100,FAKE_CMD_C,,,Supposed to pass
+TEST-A-0407,10.4.0.0,VIOLATED,FAKE_CMD_E,,,follows,,100,FAKE_CMD_C,,,FAKE_CMD_E must occur after FAKE_CMD_C within 100 seconds
+TEST-A-0408,10.4.0.0,VIOLATED,FAKE_CMD_A,,,follows,,100,FAKE_CMD_C,,,FAKE_CMD_A must occur after FAKE_CMD_C within 100 seconds
+TEST-A-0409,10.4.0.0,VIOLATED,FAKE_CMD_E,,,follows,50,100,FAKE_CMD_D,,,FAKE_CMD_E must occur 50 seconds after FAKE_CMD_D and within 100 seconds
+TEST-A-0410,10.4.0.0,VIOLATED,FAKE_CMD_F,,,follows,50,100,FAKE_CMD_D,,,Supposed to pass
+TEST-A-0411,10.4.0.0,VIOLATED,FAKE_CMD_G,,,follows,50,100,FAKE_CMD_D,,,FAKE_CMD_G must occur 50 seconds after FAKE_CMD_D and within 100 seconds
+TEST-A-0412,10.4.0.0,VIOLATED,FAKE_CMD_A,,,follows,50,100,FAKE_CMD_D,,,FAKE_CMD_A must occur 50 seconds after FAKE_CMD_D and within 100 seconds
+TEST-A-0413,10.4.0.0,VIOLATED,MISSING_CMD,,,follows,,10,FAKE_CMD_A,str_arg,B,Not triggered
+TEST-A-0414,10.4.0.0,VIOLATED,FAKE_CMD_G,int_arg,=,follows,,,FAKE_CMD_B,,,FAKE_CMD_G must occur after a FAKE_CMD_B with the same arguments
+TEST-A-0415,10.4.0.0,VIOLATED,FAKE_CMD_A,,,follows,50,,MISSING_CMD,,,MISSING_CMD not in file
+TEST-A-0416,10.4.0.0,VIOLATED,FAKE_CMD_H,int_arg,5,follows,5,,FAKE_CMD_H,,,Breathe between FAKE_CMD_H

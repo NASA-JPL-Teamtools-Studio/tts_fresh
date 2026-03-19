@@ -1,0 +1,112 @@
+{
+    "id": "cmd_waits_test_seq",
+    "metadata": {
+        "planId": 1,
+        "timeSorted": true,
+        "simulationDatasetId": 1
+    },
+    "steps": [
+        {
+            "args": [
+                {
+                    "name": "str_arg",
+                    "type": "string",
+                    "value": "A"
+                },{
+                    "name": "int_arg",
+                    "type": "number",
+                    "value": 10
+                }
+            ],
+            "stem": "FAKE_CMD_A",
+            "time": {
+                "tag": "2025-100T00:00:00",
+                "type": "ABSOLUTE"
+            },
+            "type": "command"
+        },
+        {
+          "args": [
+            {
+              "name": "int_arg",
+              "type": "number",
+              "value": 10
+            }
+          ],
+          "stem": "FAKE_CMD_B",
+          "time": {
+            "tag": "2025-100T00:00:00.000",
+            "type": "ABSOLUTE"
+          },
+          "type": "command"
+        },
+        {
+          "args": [
+            {
+              "name": "int_arg",
+              "type": "number",
+              "value": 5
+            }
+          ],
+          "stem": "FAKE_CMD_C",
+          "time": {
+            "tag": "2025-100T00:01:00.000000",
+            "type": "ABSOLUTE"
+          },
+          "type": "command"
+        },
+        {
+          "args": [
+            {
+              "name": "int_arg",
+              "type": "number",
+              "value": 5
+            }
+          ],
+          "stem": "FAKE_CMD_D",
+          "time": {
+            "tag": "00:01:00",
+            "type": "COMMAND_RELATIVE"
+          },
+          "type": "command"
+        },
+        {
+          "args": [
+            {
+              "name": "str_arg",
+              "type": "string",
+              "value": "A"
+            },{
+              "name": "int_arg",
+              "type": "number",
+              "value": 10
+            }
+          ],
+          "stem": "FAKE_CMD_A",
+          "time": {
+            "tag": "2025-100T00:02:59",
+            "type": "ABSOLUTE"
+          },
+          "type": "command"
+        },
+        {
+          "args": [
+            {
+              "name": "str_arg",
+              "type": "string",
+              "value": "B"
+            },{
+              "name": "int_arg",
+              "type": "number",
+              "value": 10
+            }
+          ],
+          "stem": "FAKE_CMD_A",
+          "time": {
+            "tag": "2025-100T00:02:59",
+            "type": "ABSOLUTE"
+          },
+          "type": "command"
+        }
+    ]
+  }

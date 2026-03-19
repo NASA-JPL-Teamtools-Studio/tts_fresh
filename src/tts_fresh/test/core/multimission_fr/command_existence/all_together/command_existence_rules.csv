@@ -1,0 +1,3 @@
+FR_ID,FR_Version,Alert_Level,Command_Stem,Message
+TEST_CEFR-A-0004,1,VIOLATED,CMD_THAT_SHOULD_NOT_BE_HERE,From command_existence_rules
+

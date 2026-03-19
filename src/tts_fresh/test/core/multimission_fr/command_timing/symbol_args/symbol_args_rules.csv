@@ -1,0 +1,7 @@
+FR_ID,FR_Version,Alert_Level,Command_Stem,Arg_Names,Arg_Values,Arg_Check_Type,Duration_Min,Duration_Max,Rel_Command,Rel_Arg_Names,Rel_Arg_Values,Message
+TEST-A-0401,10.4.0.0,VIOLATED,SEQ_ECHO,,,wait,2,,SEQ_ECHO,,,Matches everything.
+TEST-A-0402,10.4.0.0,VIOLATED,SEQ_ECHO,string_echo,literal string,wait,2,,SEQ_ECHO,,,Literal waits for anything.
+TEST-A-0403,10.4.0.0,VIOLATED,SEQ_ECHO,,,wait,2,,SEQ_ECHO,string_echo,literal string,Anything waits for literal.
+TEST-A-0404,10.4.0.0,VIOLATED,SEQ_ECHO,string_echo,literal string,wait,2,,SEQ_ECHO,string_echo,literal string,Literal waits for literal.
+TEST-A-0405,10.4.0.0,VIOLATED,SEQ_ECHO,string_echo,=,wait,2,,SEQ_ECHO,,,Anything waits for matching command.
+

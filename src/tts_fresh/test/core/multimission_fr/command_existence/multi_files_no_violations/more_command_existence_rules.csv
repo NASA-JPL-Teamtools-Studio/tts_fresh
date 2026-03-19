@@ -1,0 +1,4 @@
+FR_ID,FR_Version,Alert_Level,Command_Stem,Message
+TEST_CEFR-A-0002,2,FLAGGED,OTHER_CMD_NOT_IN_SEQUENCE,Different test flight rule for command existence flight rule checker.
+TEST_CEFR-B-0003,1,VIOLATED,FINAL_CMD_NOT_IN_SEQUENCE,Final test flight rule for command existence flight rule checker.
+

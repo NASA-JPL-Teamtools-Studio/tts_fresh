@@ -1,0 +1,7 @@
+FR_ID,FR_Version,Alert_Level,Command_Stem,Arg_Names,Arg_Values,Arg_Check_Type,Duration_Min,Duration_Max,Rel_Command,Rel_Arg_Names,Rel_Arg_Values,Message
+TEST-A-0401,10.4.0.0,VIOLATED,FAKE_CMD_A,,,overlap,,,FAKE_CMD_A,,,Non-rule - permits any timing including zero spacing
+TEST-A-0402,10.4.0.0,VIOLATED,FAKE_CMD_A,,,overlap,10,,FAKE_CMD_B,,,Do not overlap with B
+TEST-A-0403,10.4.0.0,VIOLATED,FAKE_CMD_A,,,overlap,,,FAKE_CMD_C,,,Pass
+TEST-A-0404,10.4.0.0,VIOLATED,FAKE_CMD_A,,,overlap,,,MISSING_CMD,,,Not triggered
+TEST-A-0405,10.4.0.0,VIOLATED,FAKE_CMD_B,,,overlap,10,,FAKE_CMD_C,,,Pass
+TEST-A-0406,10.4.0.0,VIOLATED,FAKE_CMD_B,,,overlap,100,,FAKE_CMD_D,,,"B takes 10 seconds, but D needs 100"

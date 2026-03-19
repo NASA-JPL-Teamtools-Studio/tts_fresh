@@ -1,0 +1,467 @@
+{
+    "id": "test_seq_5a",
+    "metadata": {
+        "planId": 1,
+        "timeSorted": false,
+        "simulationDatasetId": 1
+    },
+    "steps": [
+        {
+            "args": [
+                {
+                    "name": "int_arg",
+                    "type": "number",
+                    "value": 21
+                },
+                {
+                    "name": "uint_arg",
+                    "type": "number",
+                    "value": 30
+                },
+                {
+                    "name": "flt_arg",
+                    "type": "number",
+                    "value": 12.2
+                },
+                {
+                    "name": "hex_arg",
+                    "type": "hex",
+                    "value": "0xFEF"
+                },
+                {
+                    "name": "int_arg_2",
+                    "type": "number",
+                    "value": 6
+                },
+                {
+                    "name": "str_arg",
+                    "type": "string",
+                    "value": "SYS_RWA_NOMINAL"
+                },
+                {
+                    "name": "hex_arg_2",
+                    "type": "hex",
+                    "value": "0xFFFFFFFF"
+                },{
+                    "name": "str_arg_2",
+                    "type": "string",
+                    "value": "10"
+                }
+            ],
+            "stem": "FAKE_CMD",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "int_arg",
+                    "type": "symbol",
+                    "value": "L01INT"
+                },
+                {
+                    "name": "uint_arg",
+                    "type": "number",
+                    "value": 61
+                },
+                {
+                    "name": "flt_arg",
+                    "type": "number",
+                    "value": 17.3
+                },
+                {
+                    "name": "hex_arg",
+                    "type": "hex",
+                    "value": "0x88"
+                },
+                {
+                    "name": "int_arg_2",
+                    "type": "number",
+                    "value": 30
+                },
+                {
+                    "name": "str_arg",
+                    "type": "string",
+                    "value": "SYS_RCS_STANDBY"
+                },
+                {
+                    "name": "hex_arg_2",
+                    "type": "hex",
+                    "value": "0xFFFFF0E"
+                },{
+                    "name": "str_arg_2",
+                    "type": "string",
+                    "value": "SYS_RWA_STANDBY"
+                }
+            ],
+            "stem": "FAKE_CMD",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "int_arg",
+                    "type": "number",
+                    "value": -8
+                },
+                {
+                    "name": "uint_arg",
+                    "type": "number",
+                    "value": -75
+                },
+                {
+                    "name": "flt_arg",
+                    "type": "number",
+                    "value": -13.0
+                },
+                {
+                    "name": "hex_arg",
+                    "type": "hex",
+                    "value": "0x30"
+                },
+                {
+                    "name": "int_arg_2",
+                    "type": "number",
+                    "value": 6.5
+                },
+                {
+                    "name": "str_arg",
+                    "type": "string",
+                    "value": "SYS_RWA_NOM"
+                },
+                {
+                    "name": "hex_arg_2",
+                    "type": "hex",
+                    "value": "0xFFFFFFFFF"
+                },{
+                    "name": "str_arg_2",
+                    "type": "string",
+                    "value": "10A"
+                }
+            ],
+            "stem": "FAKE_CMD",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "system_mode",
+                    "type": "string",
+                    "value": "SYS_RWA_NOMINAL"
+                }
+            ],
+            "stem": "SET_MODE",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "system_mode",
+                    "type": "string",
+                    "value": "SYS_TEST"
+                }
+            ],
+            "stem": "SET_MODE",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "system_mode",
+                    "type": "string",
+                    "value": "SYS_LAUNCH_PRE_SEP"
+                }
+            ],
+            "stem": "SET_MODE",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "system_mode",
+                    "type": "string",
+                    "value": "SYS_LAUNCH_POST_SEP"
+                }
+            ],
+            "stem": "SET_MODE",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "system_mode",
+                    "type": "string",
+                    "value": "SYS_JOI"
+                }
+            ],
+            "stem": "SET_MODE",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "RAM_ADDRESS_TYPE",
+                    "type": "string",
+                    "value": "VIRTUAL"
+                },
+                {
+                    "name": "start_addr",
+                    "type": "number",
+                    "value": 75
+                },
+                {
+                    "name": "end_addr",
+                    "type": "hex",
+                    "value": "0x1300"
+                },
+                {
+                    "name": "make_dp",
+                    "type": "string",
+                    "value": "FALSE"
+                },
+                {
+                    "name": "dp_priority",
+                    "type": "number",
+                    "value": 0
+                }
+            ],
+            "stem": "READ_CHECKSUM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "RAM_ADDRESS_TYPE",
+                    "type": "string",
+                    "value": "VIRTUAL"
+                },
+                {
+                    "name": "start_addr",
+                    "type": "number",
+                    "value": 75
+                },
+                {
+                    "name": "end_addr",
+                    "type": "hex",
+                    "value": "0xFFFFFFFF"
+                },
+                {
+                    "name": "make_dp",
+                    "type": "string",
+                    "value": "FALSE"
+                },
+                {
+                    "name": "dp_priority",
+                    "type": "number",
+                    "value": 0
+                }
+            ],
+            "stem": "READ_CHECKSUM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "RAM_ADDRESS_TYPE",
+                    "type": "string",
+                    "value": "VIRTUAL"
+                },
+                {
+                    "name": "start_addr",
+                    "type": "number",
+                    "value": 75
+                },
+                {
+                    "name": "end_addr",
+                    "type": "hex",
+                    "value": "0x07"
+                },
+                {
+                    "name": "make_dp",
+                    "type": "string",
+                    "value": "FALSE"
+                },
+                {
+                    "name": "dp_priority",
+                    "type": "number",
+                    "value": 0
+                }
+            ],
+            "stem": "READ_CHECKSUM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "RAM_ADDRESS_TYPE",
+                    "type": "string",
+                    "value": "VIRTUAL"
+                },
+                {
+                    "name": "start_addr",
+                    "type": "number",
+                    "value": 75
+                },
+                {
+                    "name": "end_addr",
+                    "type": "hex",
+                    "value": "0xAA77BB00"
+                },
+                {
+                    "name": "make_dp",
+                    "type": "string",
+                    "value": "FALSE"
+                },
+                {
+                    "name": "dp_priority",
+                    "type": "number",
+                    "value": 0
+                }
+            ],
+            "stem": "READ_CHECKSUM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "RAM_ADDRESS_TYPE",
+                    "type": "string",
+                    "value": "VIRTUAL"
+                },
+                {
+                    "name": "start_addr",
+                    "type": "number",
+                    "value": 75
+                },
+                {
+                    "name": "end_addr",
+                    "type": "hex",
+                    "value": "0xFFFFFFFFFFF"
+                },
+                {
+                    "name": "make_dp",
+                    "type": "string",
+                    "value": "FALSE"
+                },
+                {
+                    "name": "dp_priority",
+                    "type": "number",
+                    "value": 0
+                }
+            ],
+            "stem": "READ_CHECKSUM",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "pwr_sa_wing",
+                    "type": "string",
+                    "value": "A"
+                },
+                {
+                    "name": "pwr_sa_cur_limit_setpoint",
+                    "type": "string",
+                    "value": "10A"
+                }
+            ],
+            "stem": "SET_CURRENT_SETPOINT",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "pwr_sa_wing",
+                    "type": "string",
+                    "value": "A"
+                },
+                {
+                    "name": "pwr_sa_cur_limit_setpoint",
+                    "type": "string",
+                    "value": "12A"
+                }
+            ],
+            "stem": "SET_CURRENT_SETPOINT",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        },
+        {
+            "args": [
+                {
+                    "name": "pwr_sa_wing",
+                    "type": "string",
+                    "value": "A"
+                },
+                {
+                    "name": "pwr_sa_cur_limit_setpoint",
+                    "type": "string",
+                    "value": "Disable"
+                }
+            ],
+            "stem": "SET_CURRENT_SETPOINT",
+            "time": {
+                "tag": "00:00:05",
+                "type": "COMMAND_RELATIVE"
+            },
+            "type": "command"
+        }
+    ]
+  }

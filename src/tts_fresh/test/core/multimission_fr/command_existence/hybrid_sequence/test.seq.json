@@ -1,0 +1,29 @@
+{
+    "id": "sample",
+    "steps": [
+        {
+            "type": "command",
+            "time": {
+                "tag": "00:00:01",
+                "type": "COMMAND_RELATIVE"
+            },
+            "stem": "CMD_NO_OP",
+            "args": []
+        },
+        {
+            "type": "command",
+            "time": {
+                "tag": "00:00:01",
+                "type": "COMMAND_RELATIVE"
+            },
+            "stem": "DISALLOWED_FSW_COMMAND",
+            "args": []
+        }
+    ],
+    "hardware_commands": [
+        {
+            "stem": "DISALLOWED_HW_COMMAND"
+        }
+    ]
+}
+
