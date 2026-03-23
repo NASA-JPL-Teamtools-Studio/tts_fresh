@@ -1,6 +1,6 @@
 # FRESH: Flight Rule Evaluation Script Helper
 
-![Project logo](https://github.jpl.nasa.gov/teamtools-studio/teamtools-documentation/blob/main/docs/images/tts_image_artifacts/fresh.png)
+![Project logo](https://github.com/NASA-JPL-Teamtools-Studio/teamtools_documentation/blob/main/docs/images/tts_image_artifacts/fresh.png)
 
 ## About Teamtools Studio
 
