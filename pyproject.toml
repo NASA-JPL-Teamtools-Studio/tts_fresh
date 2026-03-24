@@ -17,7 +17,7 @@ dependencies = [
   'arrow==1.2.3',
   'colorama',
   'lxml',
-  'dataclasses'
+  'dataclasses',
   "tts-utilities>=0.2.1,<1.0.0", 
 ]
 dynamic = ["version"]
