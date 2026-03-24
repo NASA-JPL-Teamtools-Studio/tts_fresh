@@ -1,0 +1,2 @@
+[console_scripts]
+fresh = fresh.run_fresh:main

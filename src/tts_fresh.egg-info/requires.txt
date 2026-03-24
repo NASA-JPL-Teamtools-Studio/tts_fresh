@@ -1,0 +1,5 @@
+arrow==1.2.3
+colorama
+lxml
+dataclasses
+tts-utilities<1.0.0,>=0.2.1
