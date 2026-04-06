@@ -3,7 +3,7 @@ name = "tts-fresh"
 description = "Standardized static flight rule checking for common types."
 readme = "README.md"
 requires-python = ">=3.6"
-license = {text = "Unlicense"}
+license = {text = "Apache-2.0"}
 authors = [
   { name = "winner", email = "emily.winner@jpl.nasa.gov" },
   { name = "dlegg", email = "david.legg@jpl.nasa.gov" },
@@ -11,7 +11,7 @@ authors = [
 ]
 classifiers = [
   "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: Unlicense",
+  "License :: OSI Approved :: Apache Software License",
 ]
 dependencies = [
   'arrow==1.2.3',
