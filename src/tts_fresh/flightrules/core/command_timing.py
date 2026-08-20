@@ -603,6 +603,20 @@ class FR_Command_Timing_Checker(FRBase):
     __CONTROL_FLOW_DIRECTIVES = get_control_flow_directives()
 
     @staticmethod
+    def _parse_delta(tag: str) -> dt.timedelta:
+        """Parse a [dddT]hh:mm:ss[.fff] relative-time tag into a timedelta"""
+        tag = tag.strip()
+        sign = -1 if tag.startswith('-') else 1
+        days, _, hms = tag.lstrip('+-').rpartition('T')
+        h, m, s = hms.split(':')
+        return sign * dt.timedelta(
+            days=int(days) if days else 0,
+            hours=int(h),
+            minutes=int(m),
+            seconds=float(s),
+        )
+
+    @staticmethod
     def __read_cmd_timing_rule_file(file: pathlib.Path) -> "list[CmdTimingRule]":
         """
         Internal helper to load and parse a CSV file containing command timing rule definitions.
@@ -675,10 +689,7 @@ class FR_Command_Timing_Checker(FRBase):
                 continue
 
             if time_type in [SeqTimeType.ABSOLUTE, SeqTimeType.COMMAND_RELATIVE, SeqTimeType.EPOCH_RELATIVE]:
-                tag = time_obj.tag.strip()
-                sign = -1 if tag.startswith('-') else 1
-                h,m,s = tag.lstrip('+-').split(':')
-                delta = sign * dt.timedelta(hours=int(h), minutes=int(m), seconds=float(s))
+                delta = FR_Command_Timing_Checker._parse_delta(time_obj.tag)
             else:
                 delta = dt.timedelta()
 
