@@ -4,19 +4,23 @@ import csv
 import re
 
 from tts_fresh.flightrules.fr_base import FRBase, FRCheckInfo, FRCriticality, FRResult, FRState
-from tts_fresh.utils.step_utils import get_steps
+from tts_fresh.utils.step_utils import get_criticality, get_steps
 from tts_fresh.seqdict import SeqDict, SeqArgType, SeqStepType
 
 
 class CmdArgRuleType(enum.Enum):
     """
     Categorizes the type of validation to perform on a command argument. 
-    It determines whether an argument should be checked against integer, float, or hexadecimal ranges, or a discrete list of allowed values.
+    It determines whether an argument should be checked against integer, float, or hexadecimal ranges,
+    a discrete list of allowed values, or a discrete list of disallowed values.
     """
     range_int = 1
     range_float = 2
     range_hex = 3
+    allowed_list = 4
+    # list_type is a deprecated alias of allowed_list, kept so that existing rule files keep working.
     list_type = 4
+    disallowed_list = 5
 
 
 class AllowableCmdRangeOperators(enum.Enum):
@@ -81,19 +85,19 @@ class CmdArgRule:
         self.fr_id = args['FR_ID']
         self.fr_version = args['FR_Version']
         self.fr_description = args['Message']
-        crit_letter = args['FR_ID'].split('-')[1]
-        self.fr_criticality = FRCriticality.from_letter(crit_letter)
+        self.fr_criticality = get_criticality(args['FR_ID'])
         self.alert_level = FRState[args['Alert_Level']]
         self.cmd_stem = args['Command_Stem']
         self.cmd_arg = args['Arg_Name']
         self.rule_type = CmdArgRuleType[args['Arg_Check_Type']]
         self.range_exclusion = True if len(args['Arg_Exclusion_Range']) > 0 else False
         self.message = args['Message']
-        if self.rule_type == CmdArgRuleType.list_type:
-            if args['Arg_Allowed_Value_List'].startswith('[') and args['Arg_Allowed_Value_List'].endswith(']'):
-                self.value_list = [v.strip() for v in args['Arg_Allowed_Value_List'][1:-1].split('|')]
+        if self.rule_type in (CmdArgRuleType.allowed_list, CmdArgRuleType.disallowed_list):
+            value_list = args.get('Arg_Value_List') or args.get('Arg_Allowed_Value_List') or ''
+            if value_list.startswith('[') and value_list.endswith(']'):
+                self.value_list = [v.strip() for v in value_list[1:-1].split('|')]
             else:
-                raise SyntaxError("List must be of the format: [ 1 | 2 | ... | n ]")
+                raise SyntaxError("Arg_Value_List must be of the format: [ 1 | 2 | ... | n ]")
         else:
             self.range_dict = self._make_range_dict(args['Arg_Range'], self.range_exclusion, args['Arg_Exclusion_Range'], self.rule_type)
 
@@ -223,6 +227,8 @@ class FR_Command_Arg_Checker(FRBase):
         with open(file, mode='r') as f:
             reader = csv.DictReader(f)
             for row in reader:
+                if not any(row.values()):
+                    continue
                 rule = CmdArgRule(row)
                 rules.append(rule)
         return rules
@@ -258,8 +264,10 @@ class FR_Command_Arg_Checker(FRBase):
                         target_arg = arg
                 if target_arg is None or target_arg.argtype == SeqArgType.SYMBOL: 
                     rule_passed = False
-                elif rule.rule_type == CmdArgRuleType.list_type:
+                elif rule.rule_type == CmdArgRuleType.allowed_list:
                     rule_passed = rule.value_in_list(target_arg.value)
+                elif rule.rule_type == CmdArgRuleType.disallowed_list:
+                    rule_passed = not rule.value_in_list(target_arg.value)
                 elif rule.rule_type == CmdArgRuleType.range_int:
                     rule_passed = rule.value_in_range(int(target_arg.value))
                 elif rule.rule_type == CmdArgRuleType.range_float:

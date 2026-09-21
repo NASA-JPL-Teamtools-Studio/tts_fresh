@@ -1,4 +1,4 @@
-FR_ID,FR_Version,Alert_Level,Command_Stem,Arg_Name,Arg_Check_Type,Arg_Allowed_Value_List,Arg_Range,Arg_Exclusion_Range,Message
+FR_ID,FR_Version,Alert_Level,Command_Stem,Arg_Name,Arg_Check_Type,Arg_Allowed_Value_List,Arg_Range,Arg_Exclusion_Range,Message,Arg_Value_List
 TEST-A-0301,10.3.1.0,VIOLATED,FAKE_CMD,int_arg,range_int,,-10 <= n <= 40,20 <= n <= 25,"This can be from -10-19 or 26-40."
 TEST-A-0302,10.3.1.0,VIOLATED,FAKE_CMD,uint_arg,range_int,,60<n<100,,"This can be from 61-99."
 TEST-B-0303,10.3.1.0,VIOLATED,FAKE_CMD,flt_arg,range_float,,10 <= n <= 16.5,,"This can be from 10.0-16.5."
@@ -11,3 +11,6 @@ TEST-A-0308,10.3.1.0,VIOLATED,FAKE_CMD,str_arg_2,list_type,[10A],,,"Wing current
 SM-A-0001,10.4.0.0,VIOLATED,SET_MODE,system_mode,list_type,[SYS_RWA_NOMINAL|SYS_RWA_STANDBY|SYS_RCS_NOMINAL|SYS_RCS_STANDBY|SYS_SAFE_UV],,,"SM-A-0001 violated. Don't send the SET_MODE command with arguments: SYS_TEST, SYS_LAUNCH_PRE_SEP, SYS_LAUNCH_POST_SEP, SYS_JOI, OR with any argument while in these modes (as they should not nominally be left during the launch or JOI activities)."
 AVS-A-0010,10.4.0.0,VIOLATED,READ_CHECKSUM,end_addr,range_hex,,0x7 <= n < 0xFFFFFFEF,,"Do not send the command READ_CHECKSUM with end address (end_addr) greater than 0xFFFF_FFEF."
 PWR-A-0009,10.4.0.0,VIOLATED,SET_CURRENT_SETPOINT,pwr_sa_cur_limit_setpoint,list_type,[10A],,,"Wing current limit must be enabled and configured to the default, 10A limit."
+TEST-A-0309,10.4.0.0,VIOLATED,FAKE_CMD,str_arg,disallowed_list,,,,"Do not use the SYS_RWA_NOMINAL or SYS_RWA_NOM modes.",[SYS_RWA_NOMINAL|SYS_RWA_NOM]
+TEST-B-0310,10.4.0.0,FLAGGED,SET_CURRENT_SETPOINT,pwr_sa_cur_limit_setpoint,disallowed_list,,,,"Do not disable the wing current limit.",[Disable]
+TEST-C-0311,10.4.0.0,VIOLATED,SET_MODE,system_mode,disallowed_list,,,,"This mode is never commanded, so nothing in the sequence should trip this rule.",[SYS_NEVER_COMMANDED]

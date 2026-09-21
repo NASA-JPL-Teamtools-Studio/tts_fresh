@@ -121,3 +121,30 @@ def test_pwr_a_0009_cmd_arg():
     assert pwr_a_0009['results'][0]['step_number'] == 15
     assert pwr_a_0009['results'][1]['state'] == 'VIOLATED'
     assert pwr_a_0009['results'][1]['step_number'] == 16
+
+def test_a_0309_cmd_arg():
+    report, seq_json = run_simple_test(__file__)
+
+    test_a_0309 = report['fr_checks']['CAT_A']['TEST-A-0309']
+    assert test_a_0309['state'] == 'VIOLATED'
+    assert len(test_a_0309['results']) == 2
+    assert test_a_0309['results'][0]['state'] == 'VIOLATED'
+    assert test_a_0309['results'][0]['step_number'] == 1
+    assert test_a_0309['results'][1]['state'] == 'VIOLATED'
+    assert test_a_0309['results'][1]['step_number'] == 3
+
+def test_b_0310_cmd_arg():
+    report, seq_json = run_simple_test(__file__)
+
+    test_b_0310 = report['fr_checks']['CAT_B']['TEST-B-0310']
+    assert test_b_0310['state'] == 'FLAGGED'
+    assert len(test_b_0310['results']) == 1
+    assert test_b_0310['results'][0]['state'] == 'FLAGGED'
+    assert test_b_0310['results'][0]['step_number'] == 16
+
+def test_c_0311_cmd_arg():
+    report, seq_json = run_simple_test(__file__)
+
+    test_c_0311 = report['fr_checks']['CAT_C']['TEST-C-0311']
+    assert test_c_0311['state'] == 'PASSED'
+    assert len(test_c_0311['results']) == 0
